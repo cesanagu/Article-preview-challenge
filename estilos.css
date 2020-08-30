@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 50px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.container{
+    box-shadow: 4px 2px 22px 3px rgba(0,0,0,0.75);
+    align-self: center;
+    display: grid;
+    grid-template-columns: 40% 53%;
+    grid-column-gap: 3%;
+    border-radius: 2%;
+    width: 45%;
+    height: 200px;
+    font-size: 11px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.container .drawers{
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/drawers.jpg);
+    background-size: cover;
+}
+
+.container .text-container{
+    grid-column: 2;
+    width: 100%;
+    margin: auto;
+}
+
+.container h1{
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.container p{
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.text-container h1, .text-container p{
+    text-align: justify;
+}
+
+.text-container p{
+    margin-bottom: 0%;
+}
+
+.user-container{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+}
+
+.user-container .user{
+    display: flex;
+}
+
+.user-container .icon-share{
+    width: 15px;
+    height: 15px;
+}
+
+button{
+    padding: 3%;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: hsl(210, 46%, 95%);
+    border: 0;
+}
+
+.user img{
+    border-radius: 50%;
+    width: 15%;
+    margin-right: 10%;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-info span:nth-child(1){
+    font-weight: 700;
+}
+
+.social{
+    display: flex;
+    height: auto;
+    align-items: center;
+    margin: 0 0 2px 70%;
+}
+
+.social .icons-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: hsl(217, 19%, 35%);
+    width: auto;
+    border-radius: 10%;
+    color: #fff;
+    padding: 2% 20%;
+}
+
+
+/* animation button js */
+
+#icons-container{
+    visibility: hidden;
+}
+#icons-container.show {
+    animation-name: delayed_show;
+	animation-delay: 500;
+	animation-fill-mode: forwards;
+}
+@keyframes delayed_show {
+    0% { visibility: hidden; }
+    100% { visibility: visible; }
+}
+
+/* animation button js */
+
+.icons-container label{
+    padding: 3% 5%;
+}
+
+.social a{
+    background-color: transparent;
+    margin: 0%;
+    padding: 3% 5%;
+}
+
+.social .icons{
+    width: 12px;
+}
+
+button:hover{
+    border: none;
+}
+
+@media (max-width: 375px) {
+    .container{
+    grid-template-columns: initial;
+    grid-template-rows: 1fr 1fr;
+    height: auto;
+    grid-column-gap: initial;
+    width: 70%;
+    font-size: 10px;
+    }
+
+    .container .drawers{
+        grid-column: none;
+        background-position: center;
+    }
+
+    .container .text-container{
+        grid-row: 2;
+        width: 80%;
+        grid-column: none;
+        margin: 20px auto;
+    }
+
+    .user img{
+        margin-right: 5%;
+    }
+
+    a{
+        margin-right: 0%;
+    }
+}
