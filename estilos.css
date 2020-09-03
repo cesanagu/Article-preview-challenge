@@ -158,9 +158,10 @@ button{
 
 button:hover{
     border: none;
+    outline: none;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     .container{
     grid-template-columns: initial;
     grid-template-rows: 1fr 1fr;
