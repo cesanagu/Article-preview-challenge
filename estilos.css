@@ -169,6 +169,7 @@ button:hover{
     grid-column-gap: initial;
     width: 70%;
     font-size: 10px;
+    height: 500px;
     }
 
     .container .drawers{
@@ -181,6 +182,7 @@ button:hover{
         width: 80%;
         grid-column: none;
         margin: 20px auto;
+        height: 210px;
     }
 
     .user img{
