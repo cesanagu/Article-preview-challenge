@@ -139,8 +139,21 @@ button{
 	animation-fill-mode: forwards;
 }
 @keyframes delayed_show {
-    0% { visibility: hidden; }
-    100% { visibility: visible; }
+    0% { 
+        visibility: hidden; 
+    }
+    100% { 
+        visibility: visible;
+     }
+}
+
+@-webkit-keyframes delayed_show {
+    0% { 
+        -webkit-backface-visibility: hidden;
+    }
+    100% { 
+        -webkit-backface-visibility: visible;
+     }
 }
 
 /* animation button js */
@@ -185,7 +198,7 @@ button:hover{
         grid-row: 2;
         width: 80%;
         grid-column: none;
-        margin: 10px auto 0px;
+        margin: 10px auto;
         height: 210px;
     }
 
