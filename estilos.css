@@ -131,28 +131,27 @@ button{
 /* animation button js */
 
 #icons-container{
+    opacity: 0;
     visibility: hidden;
+    
 }
 #icons-container.show {
     animation-name: delayed_show;
-	animation-delay: 500;
-	animation-fill-mode: forwards;
+	animation-delay: 250ms;
+    animation-fill-mode: forwards;
 }
+
 @keyframes delayed_show {
     0% { 
-        visibility: hidden; 
+        opacity: 0;
     }
     100% { 
         visibility: visible;
-     }
-}
-
-@-webkit-keyframes delayed_show {
-    0% { 
-        -webkit-backface-visibility: hidden;
-    }
-    100% { 
-        -webkit-backface-visibility: visible;
+        opacity: 1;
+        transition: all 1s ease-out; 
+        -webkit-transition: all 1s ease-out;
+        -moz-transition: all 1s ease-out;
+        -o-transition: all 1s ease-out;  
      }
 }
 
@@ -212,11 +211,11 @@ button:hover{
         visibility: hidden;
     }
 
-    #icons-container.show {
+    /* #icons-container.show {
         animation-name: delayed_show;
         animation-delay: 750;
         animation-fill-mode: forwards;
-    }
+    } */
 
     .social .icons-container{
         border-radius: 0%;
