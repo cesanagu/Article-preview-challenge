@@ -76,6 +76,8 @@ body{
 
 .user-container .user{
     display: flex;
+    align-items: center;
+    width: 150px;
 }
 
 .user-container .icon-share{
@@ -93,8 +95,9 @@ button{
 
 .user img{
     border-radius: 50%;
-    width: 15%;
     margin-right: 10%;
+    width: 30px;
+    height: 30px;
 }
 
 .user-info{
@@ -169,7 +172,8 @@ button:hover{
     grid-column-gap: initial;
     width: 70%;
     font-size: 10px;
-    height: 500px;
+    height: 450px;
+    position: relative;
     }
 
     .container .drawers{
@@ -181,15 +185,57 @@ button:hover{
         grid-row: 2;
         width: 80%;
         grid-column: none;
-        margin: 20px auto;
+        margin: 10px auto 0px;
         height: 210px;
+    }
+
+    .social{
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        display: initial;
+        visibility: hidden;
+    }
+
+    #icons-container.show {
+        animation-name: delayed_show;
+        animation-delay: 750;
+        animation-fill-mode: forwards;
+    }
+
+    .social .icons-container{
+        border-radius: 0%;
+        align-items: center;
+        padding: 2.5% 20%;
+    }
+
+    .icons-container label{
+        font-size: 1.1em;
+        padding: 0 5%;
+        letter-spacing: 1.5px;
     }
 
     .user img{
         margin-right: 5%;
     }
 
-    a{
-        margin-right: 0%;
+    .user-container{
+        margin-top: 10px;
+    }
+
+    .social a{
+        margin: 0;
+        padding: 0;
+    }
+
+    .social .icons{
+        width: 14px;;
+    }
+
+    button{
+        padding: 5%;
+        margin-right: 0;
     }
 }
